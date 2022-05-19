@@ -47,7 +47,9 @@ contract ('Color', (accounts) => {
             assert.equal(event.tokenId.toNumber(), 0, 'id is correct')
             assert.equal(event.from, '0x0000000000000000000000000000000000000000', 'from is correct')
             assert.equal(event.to, accounts[0], 'to is correct')
-
+            
+            const balance = await contract.balanceOf(accounts[0])
+            assert.equal(balance, 1)
             // FAILURE
             await contract.mint('#FFFFFF').should.be.rejected
         })              
