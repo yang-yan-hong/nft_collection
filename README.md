@@ -1,2 +1,3 @@
 # nft_collection
-NFT Buy, Sell, Create
+NFT token by ERC_721 token
+NFT Buy, Sell, Create 
